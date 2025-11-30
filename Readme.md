@@ -1,4 +1,4 @@
 ## Collaborators
 - Belchiz, Jayson G.
-- Jaspe, Hannah Lois M.
+- Jaspe, Hannah Lois A.
 
