@@ -46,6 +46,19 @@ CREATE TABLE invoices (
     FOREIGN KEY (appointid) REFERENCES appointments(appointid)
 );
 
+CREATE TABLE medicalrecords (
+    recordid INT PRIMARY KEY,
+    animalid INT,
+    recorddate DATETIME,
+    doctorid INT,
+    diagnosis VARCHAR(255),
+    prescription VARCHAR(255),
+    notes TEXT,
+    FOREIGN KEY (animalid) REFERENCES animals(animalid),
+    FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
+);
+
+
 INSERT INTO owners(ownerid, ofirstname, olastname, address, phone, email) VALUES
 (1, 'Jayson', 'Belchiz', 'Garcia', '09542567850', 'jayzbcz@gmail.com@gmail.com'),
 (2, 'Shiey', 'Cortez', 'San Jose', '09171176543', 'shiellah@gmail.com'),
@@ -57,3 +70,4 @@ INSERT INTO owners(ownerid, ofirstname, olastname, address, phone, email) VALUES
 (8, 'Hannah', 'Berte', 'Rosario', '09177778888', 'asawanibabu@gmail.com'),
 (9, 'Mark', 'Berte', 'Garcia', '09178987419', 'babunism@gmail.com'),
 (10,'John', 'Aquino', 'Davao', '09179906950', 'plottwist2025@gmail.com');
+
