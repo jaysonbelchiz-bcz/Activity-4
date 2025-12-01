@@ -149,3 +149,10 @@ JOIN animals an ON o.ownerid = an.ownerid
 JOIN appointments a ON an.animalid = a.animalid
 WHERE o.ownerid = 1       
 GROUP BY o.ownerid, o.ofirstname, o.olastname;
+
+SELECT an.animalid, an.name AS animal_name, an.species, COUNT(ap.appointid) AS total_appointments --sir walang animal na whiskers samin
+FROM animals an
+JOIN appointments ap ON an.animalid = ap.animalid
+GROUP BY an.animalid, an.name, an.species
+ORDER BY total_appointments DESC
+LIMIT 1;
