@@ -135,3 +135,4 @@ ALTER TABLE owners ADD COLUMN registereddate DATE;
 
 ALTER TABLE invoices RENAME COLUMN paymenttime to paymentdate;
 
+DELETE FROM appointments WHERE animalid = 2; --sir wala pong animal name na simba samin :(
